@@ -7,8 +7,7 @@ CHANNELS = 2
 RATE = 44100
 
 def callback(in_data, frame_count, time_info, flag):
-    # using Numpy to convert to array for processing
-    # audio_data = np.fromstring(in_data, dtype=np.float32)
+
     return in_data, pyaudio.paContinue
 
 stream = p.open(format=pyaudio.paFloat32,
